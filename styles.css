@@ -1,8 +1,93 @@
 body{
-    background-color: #323435;
+    background-color: #33393c;
 }
 aside{
     color: #fff;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 20px;
 }
+form {
+    background-color: white;
+}
+
+.custom-columns {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+  }
+  
+  .custom-columns .row {
+    align-items: center;
+  }
+  
+  .custom-columns .col {
+    position: relative;
+    background-color: white;
+    padding: 10px;
+    margin: 5px;
+    height: 485px;
+    width: 485px;
+    border: 5px solid;
+    border-radius: 10px;
+    border-color: #D41736;
+  }
+  
+  .custom-columns .col::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-color: rgba(0, 0, 0, 0.5); /* Adjust the background color and opacity */
+  }
+
+  .container-overlay {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.5); /* Adjust the background color and opacity */
+  }
+  
+  .image {
+    padding-top: 230px;
+    position: absolute;
+    top: 50%;
+    left: 54%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    width: 400px; /* Adjust the width as needed */
+  }
+  
+  
+  .custom-card-header .nav-item {
+    width: 50%;
+    text-align: center;
+  }
+
+  .btn {
+    background-color: #00A39F;
+    color: white;
+  }
+
+  .nav-link:hover {
+    color: black;
+  }
+
+  .nav-link {
+    color: #00A39F;
+    
+  }

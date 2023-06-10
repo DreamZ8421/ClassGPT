@@ -5,37 +5,95 @@
 <head>
   <title>ClassGPT</title>
   <link rel="icon" type="image/gif/png" href="ClassGPT-Rocket.png">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <link rel="stylesheet" href="styles.css">
-</head>  
-<body>
-    
-<header>
-  <!-- Logo or nav menu here -->
-  <img src="ClassGPT Rocket Logo-White.png" alt="ClassGPT" width="400" id="logo" class="FloatLeft">
-</header>
-<aside>
-  <h4>Menu</h4>
-  <p>ClassGPT<br>
-  <br>History<br>
-  <br>Tutorial<br>
-  <br>About<br>
-  <br>Account<br>
-  <br>Log Out</p>
-</aside>  
-<div class="flex-container"></div>
+</head> 
 
-  <br>
-  <!-- br is a new line -->
- 
-  <section>
-    <!-- Add additional section content here -->
-  </section>
+<body>
+  <div class="container-overlay">
+    <div class="overlay"></div>
+    <img class="image" src="ClassGPT Rocket Logo-White.png" alt="Overlay Image">
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <div class="custom-columns">
+          <div class="row">
+            <div class="col">
+              <!-- Column 1 content here -->
+              <h2><center>About</center></h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+            <div class="col">
+              <!-- Column 2 content here -->
+              <div class="card text-center">
+                <div class="custom-card-header card-header">
+                  <ul class="nav nav-tabs card-header-tabs">
+                    <li class="nav-item">
+                      <a class="nav-link active" aria-current="true" href="#signin">Sign In</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#signup">Sign Up</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="card-body">
+                  <div id="signin">
+                    <h5 class="card-title"></h5>
+                    <form>
+                      <!-- Sign In form content here -->
+                      <div class="mb-3">
+                        <label for="email" class="form-label">Email address</label>
+                        <input type="email" class="form-control" id="email" placeholder="Enter your SDSU email">
+                      </div>
+                      <div class="mb-3">
+                        <label for="password" class="form-label">Password</label>
+                        <input type="password" class="form-control" id="password" placeholder="Enter your password">
+                      </div>
+                      <button type="submit" class="btn btn-custom">Sign In</button>
+                    </form>
+                  </div>
+                  <div id="signup" style="display: none;">
+                    <h5 class="card-title"></h5>
+                    <form>
+                      <!-- Sign Up form content here -->
+                      <div class="mb-3">
+                        <label for="name" class="form-label">Name</label>
+                        <input type="text" class="form-control" id="name" placeholder="Enter your name">
+                      </div>
+                      <div class="mb-3">
+                        <label for="email" class="form-label">Email address</label>
+                        <input type="email" class="form-control" id="email" placeholder="Enter your SDSU email">
+                      </div>
+                      <div class="mb-3">
+                        <label for="password" class="form-label">Password</label>
+                        <input type="password" class="form-control" id="password" placeholder="Enter your password">
+                      </div>
+                      <button type="submit" class="btn btn-custom">Sign Up</button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <!-- Column 3 content here -->
+              <h2><center>Tutorial</center></h2>
+              <video width="358" height="250" controls>
+                <source src="Nice Ocean Waves.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="SignIn-SignUp-Handler.js"></script>
 
 </body>
 
 <footer>
-
-  <!-- Add footer content here -->
 </footer>
   
 </html>
