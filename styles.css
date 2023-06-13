@@ -1,5 +1,9 @@
 body{
     background-color: #33393c;
+    background-image: url(SDSU\ Library\ at\ Night.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-blend-mode: soft-light;
 }
 aside{
     color: #fff;
