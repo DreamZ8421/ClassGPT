@@ -2,6 +2,7 @@
 document.addEventListener("DOMContentLoaded", function() {
 const tabs = document.querySelectorAll(".nav-link");
 const forms = document.querySelectorAll(".card-body > div");
+const cards = document.querySelectorAll(".center-container > div");
 
 tabs.forEach(function(tab) {
     tab.addEventListener("click", function(e) {
@@ -12,6 +13,13 @@ tabs.forEach(function(tab) {
     });
     this.classList.add("active");
     forms.forEach(function(form) {
+        if (form.getAttribute("id") === target) {
+        form.style.display = "block";
+        } else {
+        form.style.display = "none";
+        }
+    });
+    cards.forEach(function(form) {
         if (form.getAttribute("id") === target) {
         form.style.display = "block";
         } else {
