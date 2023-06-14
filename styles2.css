@@ -75,3 +75,9 @@ aside{
     border: 5px solid;
     border-color: #D41736;
   }
+
+#logout .btn {
+  background-color: #00A39F;
+  color: white;
+  border: none;
+}
