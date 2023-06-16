@@ -168,3 +168,83 @@ aside{
     height: 280px;
     object-fit: cover;
   }
+
+  .form-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 10px;
+      text-align: center;
+    }
+
+    label {
+      display: block;
+      text-align: center;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"] {
+      width: 100%;
+      padding: 5px;
+    }
+
+    form {
+      margin-bottom: 20px;
+    }
+
+    .form-grid,
+    input[type="submit"] {
+      margin-top: 20px;
+    }
+
+    input[type="submit"] {
+      background-color: #00A39F;
+      color: white;
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #00A39F;
+      color: black;
+    }
+
+    .reset-password {
+      display: flex;
+      align-items: center;
+    }
+
+    .reset-password input[type="password"] {
+      width: 250px;
+      margin-right: 10px;
+    }
+
+    #new-password {
+      display: none;
+      margin-top: 10px; /* Add space between new password input and save password button */
+    }
+
+    #new-password input[type="password"] {
+      margin-right: 5px; /* Add space between new password input and save password button */
+    }
+
+    #reset-password-button {
+      background-color: #00A39F;
+      color: white;
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    #reset-password-button:hover {
+      background-color: #00A39F;
+      color: black;
+    }
+
+    #save-password-button {
+      background-color: #00A39F;
+      color: white;
+    }
