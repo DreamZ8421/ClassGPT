@@ -76,6 +76,12 @@ aside{
     border-color: #D41736;
   }
 
+#logout .btn {
+  background-color: #00A39F;
+  color: white;
+  border: none;
+}
+
    .carousel-item {
     position: relative;
     display: none;
