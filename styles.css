@@ -100,3 +100,57 @@ form {
     color: #00A39F;
     
   }
+
+  #footer-text {
+    text-align: center;
+    color: #00A39F;
+    padding: 1px 0;
+    border-top: .1px solid #00A39F;
+    
+  }
+  
+  
+  #footer-text .contact-info .contact-line {
+    margin-bottom: 3px;
+    font-size: 14px;
+  }
+
+  .fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fade-in 1s ease-in-out forwards;
+    
+  }
+  
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .contact-line {
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .contact-line:hover {
+    transform: scale(1.2);
+  }
+  
+  #footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 56px 0;
+    text-align: center;
+  }
+  
+  #footer-text {
+    margin-bottom: 0;
+  }
