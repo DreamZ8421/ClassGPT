@@ -1,17 +1,17 @@
+{% load static %}
 <!DOCTYPE html>
 <html>
 <head>
   <title>ClassGPT</title>
   <link rel="icon" type="image/gif/png" href="ClassGPT-Rocket.png">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="{% static 'styles.css' %}">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head> 
-
 <body>
   <div class="container-overlay">
     <div class="overlay"></div>
-    <img class="image" src="ClassGPT Rocket Logo-White.png" alt="Overlay Image">
+    <img class="image" src="{% static 'ClassGPT Rocket Logo-White.png' %}" alt="Overlay Image">
   </div>
 
   <div class="container">
@@ -24,7 +24,7 @@
               <h2><center>About</center></h2>
               <p id="about-info">Embracing the vision of empowering students with intelligent automation, ClassGPT revolutionizes the class scheduling experience at SDSU. Say goodbye to scheduling headaches and welcome a seamless, efficient, and personalized approach to planning your academic journey. With ClassGPT, students can unlock the full potential of their college experience by effortlessly creating a schedule that optimizes their learning and paves the way for success.<br><br><br>
               Contributors: Jacob Anderson, Luca Capirossi, Ian Jackson-Little, Kevin Kakkary.</p>
-              <img src="AI-in-the-classroom-01.png" alt = "AI Pic" style="width:20%;height:auto;margin-left: 38%;">
+              <img src="{% static 'AI-in-the-classroom-01.png' %}" alt = "AI Pic" style="width:20%;height:auto;margin-left: 38%;">
             </div>
             <div class="col">
               <!-- Column 2 content here -->
@@ -81,7 +81,7 @@
               <!-- Column 3 content here -->
               <h2><center>Tutorial</center></h2>
               <video width="358" height="250" controls>
-                <source src="Nice Ocean Waves.mp4" type="video/mp4">
+                <source src="{% static 'Nice Ocean Waves.mp4' %}" type="video/mp4">
               </video>
             </div>
           </div>
@@ -90,8 +90,8 @@
     </div>
   </div>
 
-  <script src="Tab-Press-Handler.js"></script>
-  <script src="Button-Page-Change.js"></script>
+  <script src="{% static 'Tab-Press-Handler.js' %}"></script>
+  <script src="{% static 'Button-Page-Change.js' %}"></script>
 
   <div id="footer">
     <div class="container">
