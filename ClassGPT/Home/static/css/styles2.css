@@ -111,9 +111,6 @@ aside{
     overflow-y: auto;
   }
   
-  .message {
-  }
-  
   .message-text {
     padding: 10px;
     border-radius: 5px;
