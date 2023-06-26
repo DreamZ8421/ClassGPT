@@ -1,7 +1,6 @@
 body{
     background-color: #3f3f41;
-    background-image: url("ClassGPT-Background.png");
-    background-size: cover;
+    background-size: cover; 
     background-attachment: fixed;
     background-blend-mode: soft-light;
     background-position-x: 80px;
