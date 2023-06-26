@@ -76,7 +76,7 @@ aside{
     border: 5px solid;
     border-color: #D41736;
   }
-
+  
   .center-container .container {
     display: flex;
     flex-direction: column;
@@ -101,25 +101,33 @@ aside{
   
   .center-container .messages-list {
     padding-left: 0;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
   }
   
   .center-container .message {
     margin-bottom: 15px;
     list-style: none;
+    display: flex;
   }
   
   .center-container .message-text {
     padding: 10px;
     border-radius: 5px;
+    width: 100%;
+    max-width: 80%;
   }
   
   .center-container .sent {
-    background-color: #dcf8c6;
+    background-color: #00A39F;
+    color: white;
     align-self: flex-end;
   }
   
   .center-container .received {
-    background-color: #f1f0f0;
+    background-color:rgb(43, 43, 43);
+    color: white;
     align-self: flex-start;
   }
   
@@ -135,12 +143,14 @@ aside{
   
   .center-container .btn-send {
     border-radius: 0;
+    background-color: #00A39F;
   }
   
   .center-container .list-unstyled {
     margin-bottom: 0;
   }
-
+  
+  
 
 #logout .btn {
   background-color: #00A39F;
