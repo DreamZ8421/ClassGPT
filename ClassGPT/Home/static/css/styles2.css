@@ -77,80 +77,96 @@ aside{
     border-color: #D41736;
   }
   
-  .center-container .container {
-    display: flex;
-    flex-direction: column;
+  #bot {
     height: 100%;
+    width: 100%;
+  }
+
+  #bot .ul{
+    background-color: white;
   }
   
-  .center-container .chat-container {
-    height: 100%;
+  .chat-container {
+    flex-grow: 1;
     display: flex;
     flex-direction: column;
+    width: 100%;
   }
   
-  .center-container .card {
+  .card {
     flex-grow: 1;
     border: none;
   }
   
-  .center-container .card-body {
-    overflow-y: auto;
+  .card-body {
     padding: 0;
+    height: 100%;
   }
   
-  .center-container .messages-list {
-    padding-left: 0;
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
-  }
-  
-  .center-container .message {
-    margin-bottom: 15px;
+  .messages-list {
     list-style: none;
-    display: flex;
+    padding: 0;
+    margin: 0;
+    flex-grow: 1;
+    overflow-y: auto;
   }
   
-  .center-container .message-text {
+  .message {
+  }
+  
+  .message-text {
     padding: 10px;
     border-radius: 5px;
-    width: 100%;
-    max-width: 80%;
   }
   
-  .center-container .sent {
+  .sent {
     background-color: #00A39F;
     color: white;
     align-self: flex-end;
   }
   
-  .center-container .received {
-    background-color:rgb(43, 43, 43);
+  .received {
+    background-color: rgb(43, 43, 43);
     color: white;
     align-self: flex-start;
   }
   
-  .center-container .message-form {
+  .message-form {
     padding: 10px;
-    background-color: #f8f9fa;
+    background-color: white;
   }
   
-  .center-container .message-input {
+  .message-input {
     border-radius: 0;
     border-right: none;
   }
   
-  .center-container .btn-send {
-    border-radius: 0;
+  .btn-send {
     background-color: #00A39F;
   }
-  
-  .center-container .list-unstyled {
-    margin-bottom: 0;
+
+  .btn-send:hover{
+    background-color: #00A39F;
+    color: black;
+  }
+
+  .messages-list::-webkit-scrollbar {
+    width: 8px; /* Width of the scrollbar */
   }
   
+  .messages-list::-webkit-scrollbar-track {
+    background-color:  rgb(43, 43, 43); /* Color of the track */
+    border-radius: 10px; /* Rounded corners of the track */
+  }
   
+  .messages-list::-webkit-scrollbar-thumb {
+    background-color: #888; /* Color of the scrollbar thumb */
+    border-radius: 10px; /* Rounded corners of the thumb */
+  }
+  
+  .messages-list::-webkit-scrollbar-thumb:hover {
+    background-color: #555; /* Color of the scrollbar thumb on hover */
+  }
 
 #logout .btn {
   background-color: #00A39F;

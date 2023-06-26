@@ -23,6 +23,8 @@ messageForm.addEventListener('submit', (event) => {
       </div>`;
   messagesList.appendChild(messageItem);
 
+  messageItem.scrollIntoView({ behavior: 'smooth', block: 'end' });
+
   messageInput.value = '';
 
   fetch('menu', {
@@ -41,7 +43,7 @@ messageForm.addEventListener('submit', (event) => {
       messageItem.innerHTML = `
       <div class="message-text">
           <div class="message-sender">
-            <b>AI Chatbot</b>
+            <b>ClassGPT</b>
           </div>
           <div class="message-content">
               ${response}
@@ -49,5 +51,7 @@ messageForm.addEventListener('submit', (event) => {
       </div>
         `;
       messagesList.appendChild(messageItem);
+
+      messageItem.scrollIntoView({ behavior: 'smooth', block: 'end' });
     });
 });
