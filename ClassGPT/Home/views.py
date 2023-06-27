@@ -6,7 +6,7 @@ from django.contrib import auth
 from django.contrib.auth.models import User
 from django.contrib import messages
 from django.utils import timezone
-openai_api_key = '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'
+openai_api_key = 'ADD_API_KEY_HERE'
 openai.api_key = openai_api_key
 
 def ask_openai(message):
