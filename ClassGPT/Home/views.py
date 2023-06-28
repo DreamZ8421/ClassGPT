@@ -2,8 +2,8 @@ from django.shortcuts import render, redirect
 from django.http import JsonResponse
 import openai
 
+openai_api_key = 'ADD_API_KEY_HERE'
 
-openai_api_key = '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'
 openai.api_key = openai_api_key
 
 def ask_openai(message):
