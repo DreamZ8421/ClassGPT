@@ -46,21 +46,21 @@
                     {% endif %}
                     <form method="post">
                       {% csrf_token %}
-                      <div class="form-group">
+                      <div class="mb-3">
                         <label for="email">Username</label>
-                        <input type="text" class="form-control" id="username" name="username" required>
+                        <input type="text" class="form-control" id="username" name="username" required placeholder="Enter your username">
                       </div>
-                      <div class="form-group">
+                      <div class="mb-3">
                         <label for="password">Password</label>
-                        <input type="password" class="form-control" id="password" name="password" required>
+                        <input type="password" class="form-control" id="password" name="password" required placeholder="Enter your password">
                       </div>
-                      <button type="submit">Login</button>
+                      <button id = "buttonPageChange" type="submit" class="btn btn-custom">Sign In</button>
                     </form>
                   </div>
                   <div id="signup" style="display: none" class="card-body"><!-- Sign Up form content here -->
                     {% if error_message %}
                       <div class="alert alert-danger" role="alert">{{ error_message }}</div>
-                    {% endif %}
+                      {% endif %}
                     <form method="post">
                       {% csrf_token %}
                       <div class="form-group">
@@ -85,6 +85,7 @@
                 </div>
               </div>
             </div>
+
             <div class="col"><!-- Column 3 content here -->
               <!-- Column 3 content here -->
               <h2><center>Tutorial</center></h2>
