@@ -19,14 +19,14 @@
       <div class="col">
         <div class="custom-columns">
           <div class="row">
-            <div class="col">
+            <div class="col"><!-- Column 1 content here -->
               <!-- Column 1 content here -->
               <h2><center>About</center></h2>
               <p id="about-info">Embracing the vision of empowering students with intelligent automation, ClassGPT revolutionizes the class scheduling experience at SDSU. Say goodbye to scheduling headaches and welcome a seamless, efficient, and personalized approach to planning your academic journey. With ClassGPT, students can unlock the full potential of their college experience by effortlessly creating a schedule that optimizes their learning and paves the way for success.<br><br><br>
               Contributors: Jacob Anderson, Luca Capirossi, Ian Jackson-Little, Kevin Kakkary.</p>
               <img src="{% static 'images/AI-in-the-classroom-01.png' %}" alt = "AI Pic" style="width:20%;height:auto;margin-left: 38%;">
             </div>
-            <div class="col">
+            <div class="col"><!-- Column 2 content here -->
               <!-- Column 2 content here -->
               <div class="card text-center">
                 <div class="custom-card-header card-header">
@@ -35,49 +35,57 @@
                       <a class="nav-link active" aria-current="true" href="#signin">Sign In</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="#signup">Sign Up</a>
+                      <a class="nav-link link" href="register">Sign Up</a>
                     </li>
                   </ul>
                 </div>
                 <div class="card-body">
-                  <div id="signin">
-                    <h5 class="card-title"></h5>
-                    <form>
-                      <!-- Sign In form content here -->
-                      <div class="mb-3">
-                        <label for="email" class="form-label">Email address</label>
-                        <input type="email" class="form-control" id="email" placeholder="Enter your SDSU email">
+                  <div id="signin" class="card-body"><!-- Sign In form content here -->
+                    {% if error_message %}
+                      <div class="alert alert-danger" role="alert">{{ error_message }}</div>
+                    {% endif %}
+                    <form method="post">
+                      {% csrf_token %}
+                      <div class="form-group">
+                        <label for="email">Username</label>
+                        <input type="text" class="form-control" id="username" name="username" required>
                       </div>
-                      <div class="mb-3">
-                        <label for="password" class="form-label">Password</label>
-                        <input type="password" class="form-control" id="password" placeholder="Enter your password">
+                      <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" class="form-control" id="password" name="password" required>
                       </div>
-                      <button id = "buttonPageChange" type="submit" class="btn btn-custom">Sign In</button>
+                      <button type="submit">Login</button>
                     </form>
                   </div>
-                  <div id="signup" style="display: none;">
-                    <h5 class="card-title"></h5>
-                    <form>
-                      <!-- Sign Up form content here -->
-                      <div class="mb-3">
-                        <label for="name" class="form-label">Name</label>
-                        <input type="text" class="form-control" id="name" placeholder="Enter your name">
+                  <div id="signup" style="display: none" class="card-body"><!-- Sign Up form content here -->
+                    {% if error_message %}
+                      <div class="alert alert-danger" role="alert">{{ error_message }}</div>
+                    {% endif %}
+                    <form method="post">
+                      {% csrf_token %}
+                      <div class="form-group">
+                        <label for="username">Username</label>
+                        <input type="text" class="form-control" id="username" name="username" required>
                       </div>
-                      <div class="mb-3">
-                        <label for="email" class="form-label">Email address</label>
-                        <input type="email" class="form-control" id="email" placeholder="Enter your SDSU email">
+                      <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="text" class="form-control" id="email" name="email" required>
                       </div>
-                      <div class="mb-3">
-                        <label for="password" class="form-label">Password</label>
-                        <input type="password" class="form-control" id="password" placeholder="Enter your password">
+                      <div class="form-group">
+                        <label for="password1">Password</label>
+                        <input type="password" class="form-control" id="password1" name="password1" required>
                       </div>
-                      <button id = "buttonPageChange" type="submit" class="btn btn-custom">Sign Up</button>
+                      <div class="form-group">
+                        <label for="password2">Confirm Password</label>
+                        <input type="password" class="form-control" id="password2" name="password2" required>
+                      </div>
+                      <button type="submit">Register</button>
                     </form>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="col">
+            <div class="col"><!-- Column 3 content here -->
               <!-- Column 3 content here -->
               <h2><center>Tutorial</center></h2>
               <video width="358" height="250" controls>
@@ -90,7 +98,7 @@
     </div>
   </div>
 
-  <script src="{% static 'js/Tab-Press-Handler.js' %}"></script>
+
   <script src="{% static 'js/Button-Page-Change.js' %}"></script>
 
   <div id="footer">

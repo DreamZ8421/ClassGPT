@@ -45,9 +45,9 @@ def login(request):
             return redirect('render_menu')
         else:
             error_message = 'Invalid username or password'
-            return render(request, 'login.html', {'error_message': error_message})
+            return render(request, 'Main.html', {'error_message': error_message})
     else:
-        return render(request, 'login.html')
+        return render(request, 'Main.html')
 
 def register(request):
     if request.method == 'POST':
@@ -61,12 +61,13 @@ def register(request):
                 user = User.objects.create_user(username, email, password1)
                 user.save()
                 auth.login(request, user)
+                print('Success creating account')
                 return redirect('render_menu')
             except:
-                error_message = 'Error creating account'
+                error_message = 'Username and/or Email Already Exists'
                 return render(request, 'register.html', {'error_message': error_message})
         else:
-            error_message = 'Password dont match'
+            error_message = 'Passwords do not match'
             return render(request, 'register.html', {'error_message': error_message})
     return render(request, 'register.html')
 
