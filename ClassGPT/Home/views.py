@@ -3,20 +3,19 @@ from django.http import JsonResponse
 import openai
 
 
-openai_api_key = 'ADD_API_KEY_HERE'
+openai_api_key = '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'
 openai.api_key = openai_api_key
 
 def ask_openai(message):
-    response = openai.Completion.create(
-        model = "text-davinci-003",
-        prompt = message,
-        max_tokens = 150,
-        n = 1,
-        stop = None,
-        temperature = 0.7,
+    response = openai.ChatCompletion.create(
+        model = "gpt-3.5-turbo",
+        messages=[
+            {"role": "system", "content": "You are an helpful assistant."},
+            {"role": "user", "content": message},
+        ]
     )
     
-    answer = response.choices[0].text.strip()
+    answer = response.choices[0].message.content.strip()
     return answer
 
 
