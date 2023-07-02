@@ -3,10 +3,11 @@ from django.http import JsonResponse
 import openai
 from django.contrib.auth.decorators import login_required
 from django.contrib import auth
-from django.contrib.auth.models import User
+from .models import User, Chat
+from django.utils import timezone
 
 
-openai_api_key = 'ADD_API_KEY_HERE'
+openai_api_key = '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'
 openai.api_key = openai_api_key
 
 def ask_openai(message):
@@ -29,11 +30,16 @@ def ask_openai(message):
 #THIS IS THE CHATBOT IN THE GITHUB REPO
 @login_required(login_url='login')
 def render_menu(request):
+    chats = Chat.objects.filter(user=request.user)
+
     if request.method == 'POST':
         message = request.POST.get('message')
         response = ask_openai(message)
+
+        chat = Chat(user=request.user, message=message, response=response, created_at=timezone.now())
+        chat.save()
         return JsonResponse({'message': message, 'response': response})
-    return render(request,'classgpt.html')
+    return render(request,'classgpt.html', {'chats': chats})
 
 def login(request):
     if request.method == 'POST':
