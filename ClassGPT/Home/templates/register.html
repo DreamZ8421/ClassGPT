@@ -33,7 +33,6 @@
     margin-bottom: 20px;
   }
   label {
-    
     display: block;
     margin-bottom: 5px;
   }
@@ -88,38 +87,119 @@
   #Label4{
     text-align:center;
   }
+  #footer-text {
+  text-align: center;
+  color: #00A39F;
+  padding: 1px 0;
+  border-top: .1px solid #00A39F;
+  border-bottom: .1px solid #00A39F;
+  border-left: .3px solid #00A39F;
+  border-right: .3px solid #00A39F;
+  background-color: rgba(51, 57, 60, 0.7);
+  border-radius: 100px;
+  
+}
+
+
+#footer-text .contact-info .contact-line {
+  margin-bottom: 3px;
+  font-size: 14px;
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fade-in 1s ease-in-out forwards;
+  
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.contact-line {
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.contact-line:hover {
+  transform: scale(1.2);
+}
+
+#footer {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50%;
+  padding: 46px 0;
+  text-align: center;
+}
+
+#footer-text {
+  margin-bottom: 0;
+}
 </style>
 {% endblock %}
 
 {% block content %}
 <div class="container">
-<div class="card">
-<div class = "card-header">Register</div>
-  <div id="signup"  class="card-body"><!-- Sign Up form content here -->
-                    {% if error_message %}
-                      <div class="alert alert-danger" role="alert">{{ error_message }}</div>
-                    {% endif %}
-                    <form method="post">
-                      {% csrf_token %}
-                      <div class="mb-3">
-                        <label id='Label' for="username">Username</label>
-                        <input type="text" class="form-control" id="username" name="username" required placeholder='Enter Username'>
-                      </div>
-                      <div class="mb-3">
-                        <label id='Label2'for="email">Email</label>
-                        <input type="text" class="form-control" id="email" name="email" required placeholder='Enter Email'>
-                      </div>
-                      <div class="mb-3">
-                        <label id='Label3'for="password1">Password</label>
-                        <input type="password" class="form-control" id="password1" name="password1" required placeholder='Enter Password'>
-                      </div>
-                      <div class="mb-3">
-                        <label id='Label4' for="password2">Confirm Password</label>
-                        <input type="password" class="form-control" id="password2" name="password2" required placeholder='Confirm Password'>
-                      </div>
-                      <button  type="submit">Sign Up</button>
-                    </form>
-                  </div>
-                </div>
-              </div>
+  <div class="card">
+    <div class="card-header">Register</div>
+    <div id="signup" class="card-body">
+      <!-- Sign Up form content here -->
+      {% if error_message %}
+      <div class="alert alert-danger" role="alert">{{ error_message }}</div>
+      {% endif %}
+      <form method="post">
+        {% csrf_token %}
+        <div class="mb-3">
+          <label id='Label' for="username">Username</label>
+          <input type="text" class="form-control" id="username" name="username" required placeholder='Enter Username'>
+        </div>
+        <div class="mb-3">
+          <label id='Label2' for="email">Email</label>
+          <input type="text" class="form-control" id="email" name="email" required placeholder='Enter Email'>
+        </div>
+        <div class="mb-3">
+          <label id='Label3' for="password1">Password</label>
+          <input type="password" class="form-control" id="password1" name="password1" required placeholder='Enter Password'>
+        </div>
+        <div class="mb-3">
+          <label id='Label4' for="password2">Confirm Password</label>
+          <input type="password" class="form-control" id="password2" name="password2" required placeholder='Confirm Password'>
+        </div>
+        <button type="submit">Sign Up</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<div id="footer">
+  <div class="container-footer">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <div id="footer-text">
+          <div class="contact-info">
+            <p class="contact-line">
+              <i class="fas fa-envelope"></i>
+              <span class="contact-value" style="font-size: 13px;">classgpt@gmail.com</span>
+            </p>
+            <p class="contact-line">
+              <i class="fas fa-copyright"></i>
+              <span class="contact-value" style="font-size: 13px;">2023</span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 {% endblock %}
