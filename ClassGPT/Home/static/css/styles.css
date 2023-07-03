@@ -97,20 +97,6 @@ color:   #33393c;
 
 .nav-link {
   color: #00A39F;
-
-  #footer-text {
-    text-align: center;
-    color: #00A39F;
-    padding: 1px 0;
-    border-top: .1px solid #00A39F;
-    border-bottom: .1px solid #00A39F;
-    border-left: .3px solid #00A39F;
-    border-right: .3px solid #00A39F;
-    background-color: rgba(51, 57, 60, 0.7);
-    border-radius: 100px;
-    
-  }
-  
 }
 
 #footer-text {
@@ -141,13 +127,6 @@ color:   #33393c;
 
 @keyframes fade-in {
   from {
-
-  #footer-text .contact-info .contact-line {
-    margin-bottom: 3px;
-    font-size: 14px;
-  }
-  
-  .fade-in {
     opacity: 0;
     transform: translateY(20px);
   }
@@ -179,27 +158,3 @@ color:   #33393c;
 #footer-text {
   margin-bottom: 0;
 }
-
-  
-  .contact-line {
-    cursor: pointer;
-    transition: all 0.3s ease;
-  }
-  
-  .contact-line:hover {
-    transform: scale(1.2);
-  }
-  
-  #footer {
-    position: fixed;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 50%;
-    padding: 46px 0;
-    text-align: center;
-  }
-  
-  #footer-text {
-    margin-bottom: 0;
-  }
